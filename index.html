@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Spotwise - Real-time Parking Analytics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/spot.css" rel="stylesheet">
+
+    <!-- Custom Google Web Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Add custom CSS here -->
+    <link href="css/landing-page.css" rel="stylesheet">
+    
+    <!-- JQuery for scrolling and things-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script language="javascript">
+	function scrollToAnchor(aid){
+    	var aTag = $("a[name='"+ aid +"']");
+    	$('html,body').animate({scrollTop: aTag.offset().top},'slow');
+	}
+	</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-51695884-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+</head>
+
+<body>
+<a name="top"></a>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand fake-link" onClick="scrollToAnchor('top');">
+                    <img class='img-responsive' src='img/spotwise_logo_transparent.png' alt='Spotwise'>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="fake-link" onClick="scrollToAnchor('whatwedo');">What We Do</a>
+                    </li>
+                    <li><a class="fake-link" onClick="scrollToAnchor('whoweare');">Who We Are</a>
+                    </li>
+                    <li><a class="fake-link" onClick="scrollToAnchor('contactus');">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="intro-header">
+
+        
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message jumbotron">
+                        <h1 class='hero-headline'>Real-Time Parking Analytics</h1>
+                        <h3 class='hero-tagline'>Maximize your bottom line with smart enforcement routing and dynamic pricing</h3>
+                        <h5 class="sign-up-tagline">Our beta is rolling out soon. Join our waitlist for early access.</h5>
+                        <form name="contactform" method="post" action="send_form_email_edited.php" class="form-inline sign-up-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                <input type="email" class="form-control input-lg" id="exampleInputEmail2" placeholder="Email" name="email" autofocus>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg">Submit</button>
+                        </form>
+                        <!--<ul class="list-inline intro-social-buttons">
+                        <li><a id="various" class="btn btn-danger btn-lg" data-fancybox-type="iframe" href="/iframe.html"><i class="fa fa-pencil-square-o fa-fw"></i>&nbsp;Contact Us Now</a></li>
+                        </ul> -->
+                        <ul class="list-inline intro-social-buttons">
+                            <li><a href="https://twitter.com/parkingwithspot" class="btn"><i class="fa fa-twitter-square fa-fw"></i></a>
+                            </li>
+                            <li><a href="https://facebook.com/parkingwithspot" class="btn "><i class="fa fa-facebook-square fa-fw"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/company/3740918?trk=tyah&trkInfo=tarId%3A1404396312463%2Ctas%3Aspot%20innovation%2Cidx%3A2-1-2" class="btn"><i class="fa fa-linkedin-square fa-fw"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+    
+	<a name="whatwedo"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+            	<h1 class="section">What We Do</h1>
+                <hr class="section-heading-spacer">
+			    <div class="clearfix"></div>
+                <div class="col-sm-push-5  col-sm-7">
+                    <h2 class="section-heading">Monitor Lots in Real-time</h2>
+                    <p class="lead">Our camera-based intelligent detection system utilizes a proprietary computer vision algorithm to detect and record vehicles in off-street lots and curbside parking zones. Our cameras know:
+                        <ul class='content-bullets'>
+                            <li>Which spots are occupied</li>
+                            <li>How long each car has been there</li>
+                        </ul>
+                    </p>
+                    <p class="lead lead-padding-top">Our system also integrates with billing data to determine:
+                        <ul class='content-bullets'>
+                            <li>Which spots are in violation</li>
+                        	<li>How long those spots have been in violation</li>
+                            <li>Which spots will be in violation soon</li>
+                        </ul>                    
+                        <!--<ol>
+                            <li>Custom devices monitor parking spaces using on-board, high-fidelity cameras</li>
+                            <li>State-of-the-art computer vision algorithms use these images to detect occupied spots</li>
+                            <li>Results of this processing are analyzed to determine current lot occupancy</li>
+                        </ol>-->
+                    </p>
+                </div>
+                <div class="col-sm-pull-7  col-sm-5">
+                    <img class="img-responsive lot-image" src="img/lot_cars_identified.png" alt="">
+                </div>
+            </div>
+            <!-- /.row -->
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2 class="section-heading">Make Use of Your Data</h2>
+                    <h3>Smart Enforcement Routing</h3>
+                    <p class="lead">Our software employs machine learning algorithms that put this new occupancy data to work. With this information, our system can reroute enforcement officers to the lots that make the most sense at the time, boosting efficiency along with revenue. This decision is based on:
+                    <ul class='content-bullets'>
+                        <li>Number of violators and soon to be violators</li>
+                        <li>Distance to lot</li>
+                        <li>Historical success rate at collecting ticket revenues in each lot</li>
+                        <li>Other factors manually included by operator</li>
+                    </ul>
+                    </p>
+                    <h3 class="dynamic-pricing-header">Dynamic Pricing</h3>
+                    <p class="lead">The real-time occupancy data that our cameras relay can also be used to setup a dynamic pricing model. If your lot is filling up quickly, the Spotwise modeling algorithm can automatically switch the pricing tiers displayed on the pay stations to ensure you are charging the perfect amount to maximize your return.
+                    </p>
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                    <img class="img-responsive enforcement-route-image" src="img/enforcement_route.png" alt="">
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-sm-12">
+            		<hr class="section-heading-spacer">
+			    	<div class="clearfix"></div>
+            		<p>Read <a href="http://www.tennessean.com/story/money/tech/2014/05/07/meet-jumpstart-foundry-startup-class/8803295/">our article in the Tennesseean</a> or <a href="http://southernalpha.com/leaked-jumpstart-foundry-class-2014/">our article on SouthernAlpha</a> for more information on our company and others in the <a href="http://jsf.co">Jumpstart Foundry</a> 2014 cohort.</p>
+            	</div>
+            </div>
+            
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    
+    <a name="whoweare"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+        
+            <div class="row">
+            	<h1 class="section">Who We Are</h1>
+                <hr class="section-heading-spacer">
+			    <div class="clearfix"></div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="row">
+                    	<div class="col-sm-push-6 col-sm-6" style="text-align:center;">
+                            <img src="img/james.png" class="img-thumbnail team-pic"/>
+                        </div>
+                        <div class="col-sm-pull-6 col-sm-6">
+                            <h3>James Crater, CEO</h3>
+                            <p>Hailing from Vanderbilt University, James started his career in content and social media marketing. At Spot, he's in charge of strategy and business development, leading the company toward its vision. He loves problem solving, writing, and Manchester United Football Club.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="row">
+                    	<div class="col-sm-6" style="text-align:center;">
+                            <img src="img/chase.png" class="img-thumbnail team-pic"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>Chase Merlin, COO</h3>
+                            <p>A graduate of the University of Pennsylvania, Chase is Spot’s efficiency guru. He ensures the team makes decisions based on empirical evidence and finds ways to do everything more quickly and effectively. He’s into data mining, web development, and cognitive science.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="row">
+                    	<div class="col-sm-push-6 col-sm-6" style="text-align:center;">
+                            <img src="img/zach.png" class="img-thumbnail team-pic"/>
+                        </div>
+                        <div class="col-sm-pull-6 col-sm-6">
+                            <h3>Zach McCormick, CTO</h3>
+                            <p>The godfather of Spot, Zach was the originator of the concept and brought the team together. A Vanderbilt University alum, Zach manages the engineering and design teams and finds innovative solutions for complex, multi-variate problems. He is a fan of advanced mathematics, project management, and tinkering with the latest bleeding-edge technology.
+			    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="row">
+                    	<div class="col-sm-6" style="text-align:center;">
+                            <img src="img/trevor.png" class="img-thumbnail team-pic"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>Trevor McCormick, CMO</h3>
+                            <p>Once a Xavier University Musketeer, Trevor takes care of Spot’s finances and oversees the dynamic pricing engine development. He has extensive experience running successful political campaigns and building detailed research reports on public policy and economics. Trevor likes economic theory, probabilistic modeling, and acoustic guitar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+	<a name="contactus"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+            <h1 class="section">Contact Us</h1>
+            	<hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <div class="col-lg-4">
+                    <p class="lead">Spotwise currently works out of the Entrepreneur Center in Nashville, Tennessee as part of the 2014 Jumpstart Foundry cohort. Shoot us an email for any reason at all. We respond pretty quickly!</p>
+                    <h4 class="email-listing">E-mail: <a href="mailto:info@tryspot.co">info@tryspot.co</a></h4>
+                    <p>Address:<br>
+                    45 Peabody Street<br>
+                    Nashville, TN 37210<br>
+                    United States of America
+                    </p>
+                </div>
+                <div class="col-lg-3" style="text-align:center;vertical-align:middle">
+                	<img class="img-responsive jsf-logo" src="img/jsf_2.png" alt="">
+                    <img class="img-responsive ec-logo" src="img/ec_2.png" alt="">
+                </div>
+                <div class="col-lg-5">
+                    <img class="img-thumbnail" src="img/map.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+<!--
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Connect with Spotwise</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        <li><a href="https://twitter.com/parkingwithspot" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li>
+                        <li><a href="https://facebook.com/parkingwithspot" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                        </li>
+                        <li><a href="mailto:info@tryspot.co" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">E-mail</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div> -->
+
+    <!-- /.banner -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline footer-list">
+                        <li><a class="fake-link" onClick="scrollToAnchor('top');">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a class="fake-link" onClick="scrollToAnchor('whatwedo');">What We Do</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a class="fake-link" onClick="scrollToAnchor('whoweare');">Who We Are</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a class="fake-link" onClick="scrollToAnchor('contactus');">Contact Us</a>
+                        </li>
+                        <li class="social-button"><a href="https://twitter.com/parkingwithspot" class="btn"><i class="fa fa-twitter-square fa-fw"></i></a>
+                        </li>
+                        <li class="social-button"><a href="https://facebook.com/parkingwithspot" class="btn "><i class="fa fa-facebook-square fa-fw"></i></a>
+                        </li>
+                        <li class="social-button"><a href="https://www.linkedin.com/company/3740918?trk=tyah&trkInfo=tarId%3A1404396312463%2Ctas%3Aspot%20innovation%2Cidx%3A2-1-2" class="btn"><i class="fa fa-linkedin-square fa-fw"></i></a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Spot Innovation, Inc. 2014. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/bootstrap.js"></script>
+<script type="text/javascript">;
+$(document).ready(function() {
+$("#various").fancybox({
+		fitToView	: false,
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+beforeShow: function(){
+        this.width = $('.fancybox-iframe').contents().find('table:first').width();
+        this.height = $('.fancybox-iframe').contents().find('table:first').height() + 60;
+    },
+	});
+});
+</script>
+</body>
+
+</html>
